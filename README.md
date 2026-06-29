@@ -42,6 +42,25 @@ The mod **does not modify the server** and does **not require server installatio
 ✔ Timestamped output folders
 
 ---
+## Confirmed Working
+
+Version 1.0.0 has been tested with ArcanumLand.
+
+Confirmed:
+
+- Quest dump works
+- Import ready export works
+- Single player world loads quests
+- Quest completion works
+- Reward tables load
+- Rewards can be claimed
+
+Import path:
+
+```text
+ArcanumLand/config/ftbquests/quests/
+
+---
 
 # Planned
 
