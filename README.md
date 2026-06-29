@@ -1,4 +1,3 @@
-# arcanum-quest-dumper
 # Arcanum Quest Dumper
 
 > A Forge 1.20.1 client side utility for exporting synchronized FTB Quests data from multiplayer servers into reusable SNBT files.
