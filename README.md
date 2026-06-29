@@ -8,7 +8,7 @@
 
 # Overview
 
-Arcanum Quest Dumper is a lightweight client side Forge mod that allows players to export the complete synchronized FTB Quests database after joining a multiplayer server.
+Arcanum Quest Dumper is a lightweight Forge client side mod that exports synchronized FTB Quests data from multiplayer servers into reusable SNBT files.
 
 The exported data can be used for:
 
@@ -16,110 +16,68 @@ The exported data can be used for:
 * Quest analysis
 * Backup and archival
 * Reverse engineering quest packs
-* Future conversion into a standalone singleplayer FTB Quests pack
+* Converting multiplayer quest packs into usable single player quest packs
 
-The mod **does not modify the server** and does **not require server installation**.
+The mod is entirely client side. It does **not** modify the server and does **not** require installation on the server.
 
 ---
 
 # Features
 
-## Current
-
-✔ Client side only
-
-✔ Works on Forge 1.20.1
-
-✔ Dumps complete FTB Quests database
-
-✔ Exports every chapter
-
-✔ Exports reward tables
-
-✔ Exports chapter groups
-
-✔ Timestamped output folders
-
----
-## Confirmed Working
-
-Version 1.0.0 has been tested with ArcanumLand.
-
-Confirmed:
-
-- Quest dump works
-- Import ready export works
-- Single player world loads quests
-- Quest completion works
-- Reward tables load
-- Rewards can be claimed
-
-Import path:
-
-```text
-ArcanumLand/config/ftbquests/quests/```
-
----
-
-# Planned
-
-## Version 0.2
-
-* Better logging
-* Cleaner filenames
-* Config file
-* Dump status command
-
-## Version 0.3
-
-* Automatic dump after quest synchronization
-* No manual command required
-
-## Version 0.4
-
-* JSON export
-
-## Version 0.5
-
-* Player progress export
-
-* Team progress export
-
-* Claimed reward export
-
-## Version 0.6
-
-* Singleplayer converter
-
-* Automatic installation into worlds
-
-## Version 0.7
-
-* In game GUI
-
 ## Version 1.0
 
-* Full standalone release
+* Client side only
+* Forge 1.20.1 support
+* Complete FTB Quests export
+* Chapter export
+* Reward table export
+* Chapter group export
+* Timestamped exports
+* Import ready quest pack generation
+
+---
+
+# Confirmed Working
+
+Version **1.0.0** has been tested successfully using the **ArcanumLand** modpack.
+
+Confirmed functionality:
+
+* Complete quest dump
+* Import ready export generation
+* Single player import
+* Quest progression
+* Quest completion
+* Reward tables
+* Reward claiming
+
+### Import Location
+
+```text
+<Minecraft Instance>/config/ftbquests/quests/
+```
+
+Use the generated **Import Ready** folder, **not** the raw dump folder.
 
 ---
 
 # Requirements
 
-Minecraft
+### Minecraft
 
-```
+```text
 1.20.1
 ```
 
-Forge
+### Forge
 
-```
+```text
 47.4.x
 ```
 
-Java
+### Java
 
-```
+```text
 17
 ```
 
@@ -127,35 +85,33 @@ Java
 
 # Building
 
-Clone the repository.
+Clone the repository:
 
-```
+```bash
 git clone https://github.com/TylerDubs/arcanum-quest-dumper.git
 ```
 
-Enter the project.
+Enter the project:
 
-```
+```bash
 cd arcanum-quest-dumper
 ```
 
-Build the mod.
+Build:
 
-Windows
-
-```
+```bash
 build.bat
 ```
 
 or
 
-```
+```bash
 gradlew build
 ```
 
-Compiled jar:
+Compiled JAR:
 
-```
+```text
 build/libs/
 ```
 
@@ -163,16 +119,16 @@ build/libs/
 
 # Installation
 
-Copy the generated jar into:
+Copy the compiled JAR into:
 
-```
+```text
 .minecraft/mods/
 ```
 
 or
 
-```
-CurseForge Instance/mods/
+```text
+<CurseForge Instance>/mods/
 ```
 
 Launch Minecraft normally.
@@ -181,30 +137,30 @@ Launch Minecraft normally.
 
 # Usage
 
-Join a server running FTB Quests.
+Join a multiplayer server running FTB Quests.
 
-Once fully loaded, execute:
+Once synchronization has completed, execute:
 
-```
+```text
 /dumpquests
 ```
 
-The exported quest pack will be created inside:
+The export will be generated in:
 
-```
+```text
 quest-dumps/
 ```
 
 Example:
 
-```
+```text
 quest-dumps/
 └── ftbquests-full-2026-06-29_14-51-08/
 ```
 
-Containing:
+Contents:
 
-```
+```text
 chapters/
 reward_tables/
 chapter_groups.snbt
@@ -215,74 +171,65 @@ data.snbt
 
 # Current Output
 
-Example:
+Example chapter files:
 
-```
-chapters/
-
+```text
 ars_nouveau.snbt
-
 blood_magic.snbt
-
 create.snbt
-
 mobs.snbt
-
 items.snbt
-
 wizard_reborn.snbt
-
 ...
 ```
 
 Reward tables:
 
-```
+```text
 reward_tables/
 ```
 
 ---
 
-# Project Goals
+# Development Roadmap
 
-## Phase 1
+## Version 1.0 ✅
 
-- [x] Create Forge mod
-- [x] Load successfully
-- [x] Dump synchronized quest database
-- [x] Export chapters
-- [x] Export reward tables
+* Complete quest export
+* Import ready quest pack generation
+* Verified single player import
 
-## Phase 2
+## Version 2
 
-- [ ] Export player progress
-- [ ] Export team progress
-- [ ] Export completed quests
-- [ ] Export claimed rewards
+* Dump status command
+* Open export folder command
+* Automatic export after synchronization
+* Metadata generation
+* Cleaner output
 
-## Phase 3
+## Version 3
 
-- [ ] Automatic quest synchronization detection
-- [ ] Automatic dumping
-- [ ] Configurable output directory
+* Player progress export
+* Team progress export
+* Claimed reward export
+* Quest completion export
 
-## Phase 4
+## Version 4
 
-- [ ] Convert dump into a valid singleplayer FTB Quests pack
-- [ ] Automatic installer for worlds
-- [ ] Quest validation
+* Automatic installer
+* Quest validation
+* Quest repair
+* Pack conversion tools
 
-## Phase 5
+## Version 5
 
-- [ ] GUI
-- [ ] JSON exporter
-- [ ] Release 1.0
+* Desktop GUI
+* JSON exporter
+* Standalone quest conversion utility
 
 ---
 
 # Repository
-
-GitHub
 
 https://github.com/TylerDubs/arcanum-quest-dumper
 
