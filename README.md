@@ -57,7 +57,7 @@ Confirmed:
 Import path:
 
 ```text
-ArcanumLand/config/ftbquests/quests/
+ArcanumLand/config/ftbquests/quests/```
 
 ---
 
