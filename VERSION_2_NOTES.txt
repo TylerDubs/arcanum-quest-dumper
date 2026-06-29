@@ -1,0 +1,21 @@
+Arcanum Quest Dumper v2.0.0
+
+New commands:
+/dumpquests
+/dumpquests dump
+/dumpquests status
+/dumpquests convert_latest
+
+New output:
+- ftbquests-full timestamp folder
+- ftbquests-raw timestamp SNBT
+- questfile-summary timestamp JSON
+- import-ready timestamp folder
+
+Import-ready layouts created:
+- INSTANCE_CONFIG/ftbquests/quests
+- WORLD_SERVERCONFIG/ftbquests/quests
+
+Important:
+FTB Quests often loads definitions from ftbquests/quests, not directly from ftbquests.
+If the quest book is blank, verify the folder structure includes the quests subfolder.

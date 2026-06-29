@@ -5,7 +5,7 @@ issueTrackerURL=""
 
 [[mods]]
 modId="questdumper"
-version="1.0.0"
+version="2.0.0"
 displayName="Arcanum Quest Dumper"
 displayURL=""
 logoFile=""
@@ -13,7 +13,7 @@ credits=""
 authors="NirmataCipher"
 description='''
 Client side quest dumper for FTB Quests synced from a server.
-Adds /dumpquests.
+Adds /dumpquests, /dumpquests status, and /dumpquests convert_latest.
 '''
 
 [[dependencies.questdumper]]
