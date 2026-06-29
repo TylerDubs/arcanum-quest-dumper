@@ -27,18 +27,16 @@ The mod is entirely client side. It does **not** modify the server and does **no
 
 ---
 
-# Features
+# Current Features
 
-## Version 1.0
-
-* Client side only
-* Forge 1.20.1 support
-* Complete FTB Quests export
-* Chapter export
-* Reward table export
-* Chapter group export
-* Timestamped exports
-* Import ready quest pack generation
+- Client side only
+- Forge 1.20.1 support
+- Complete FTB Quests export
+- Chapter export
+- Reward table export
+- Chapter group export
+- Timestamped exports
+- Import ready quest pack generation
 
 ---
 
@@ -109,6 +107,37 @@ Use the generated **Import Ready** folder, **not** the raw dump folder.
 ```text
 17
 ```
+
+---
+
+# Quick Start
+
+1. Download the latest release from the Releases page.
+2. Place the JAR into your Minecraft `mods` folder.
+3. Join a multiplayer server running FTB Quests.
+4. Wait for quests to finish synchronizing.
+5. open quest book flip through chapters for fun then exit
+6. Run:
+
+```text
+/dumpquests
+```
+
+6. Close Minecraft.
+7. Copy:
+
+```text
+quest-dumps/import-ready-YYYY-MM-DD_HH-MM-SS/INSTANCE_CONFIG/ftbquests
+```
+
+to
+
+```text
+<Instance>/config/
+```
+
+8. Create a brand new single player world.
+9. Open the quest book.
 
 ---
 
@@ -256,67 +285,118 @@ If chapters appear and rewards work, the import succeeded.
 
 # Current Output
 
-Example chapter files:
-
-```text
-ars_nouveau.snbt
-blood_magic.snbt
-create.snbt
-mobs.snbt
-items.snbt
-wizard_reborn.snbt
-...
+```
+quest-dumps/
+├── ftbquests-full-YYYY-MM-DD_HH-MM-SS/
+│   ├── chapters/
+│   ├── reward_tables/
+│   ├── chapter_groups.snbt
+│   └── data.snbt
+│
+└── import-ready-YYYY-MM-DD_HH-MM-SS/
+    └── INSTANCE_CONFIG/
+        └── ftbquests/
+            └── quests/
 ```
 
-Reward tables:
+---
 
-```text
-reward_tables/
-```
+# Changelog
+
+## v1.0.0
+
+Initial public release.
+
+### Added
+
+- Client side quest exporter
+- Import ready quest pack generation
+- Verified ArcanumLand compatibility
+- Complete chapter export
+- Reward table export
 
 ---
 
 # Development Roadmap
 
-## Version 1.0 ✅
+## v1.0.0 ✅
 
-* Complete quest export
-* Import ready quest pack generation
-* Verified single player import
+- [x] Client side exporter
+- [x] Complete quest dump
+- [x] Import ready export
+- [x] Verified single player import
 
-## Version 2
+---
 
-* Dump status command
-* Open export folder command
-* Automatic export after synchronization
-* Metadata generation
-* Cleaner output
+## v2.1 Command Improvements
 
-## Version 3
+- [ ] /dumpquests status
+- [ ] /dumpquests path
+- [ ] /dumpquests open
+- [ ] /dumpquests clean
+- [ ] Better export messages
 
-* Player progress export
-* Team progress export
-* Claimed reward export
-* Quest completion export
+---
 
-## Version 4
+## v2.2 Automatic Export
 
-* Automatic installer
-* Quest validation
-* Quest repair
-* Pack conversion tools
+- [ ] Detect quest synchronization
+- [ ] Automatically export quests
+- [ ] Automatic notifications
 
-## Version 5
+---
 
-* Desktop GUI
-* JSON exporter
-* Standalone quest conversion utility
+## v2.3 Validation
+
+- [ ] Validate exported packs
+- [ ] Metadata generation
+- [ ] Missing file detection
+
+---
+
+## v3.0 Progress Export
+
+- [ ] Player progress
+- [ ] Team progress
+- [ ] Completed quests
+- [ ] Claimed rewards
+
+---
+
+## v4.0 Converter
+
+- [ ] Quest pack repair
+- [ ] Standalone converter
+- [ ] Automatic installer
+
+---
+
+## v5.0 GUI
+
+- [ ] Export manager
+- [ ] Quest browser
+- [ ] Search
+- [ ] Configuration
 
 ---
 
 # Repository
 
 https://github.com/TylerDubs/arcanum-quest-dumper
+
+---
+
+# Support
+
+If you encounter a bug or have a feature request, please open an Issue on GitHub.
+
+Before reporting a bug, include:
+
+- Minecraft version
+- Forge version
+- FTB Quests version
+- Latest log
+- Steps to reproduce
 
 ---
 
