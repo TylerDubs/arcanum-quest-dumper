@@ -1,5 +1,10 @@
 # Arcanum Quest Dumper
 
+![Minecraft](https://img.shields.io/badge/Minecraft-1.20.1-brightgreen)
+![Forge](https://img.shields.io/badge/Forge-47.4.x-orange)
+![License](https://img.shields.io/badge/License-MIT-blue)
+![Status](https://img.shields.io/badge/Status-Stable-success)
+
 > A Forge 1.20.1 client side utility for exporting synchronized FTB Quests data from multiplayer servers into reusable SNBT files.
 
 **Author:** NirmataCipher
