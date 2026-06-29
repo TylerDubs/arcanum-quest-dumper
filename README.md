@@ -66,13 +66,13 @@ Use the generated **Import Ready** folder, **not** the raw dump folder.
 
 ## Screenshots
 
-### Running the Export
+### Running the Export using /dumpquest command
 
 ![Export](images/export_command1.png)
 ![Export](images/export_command_success.png)
 
 
-### Generated Files
+### Generated Files go into "import-ready-date" 
 
 ![Generated Files](images/generated_files.png)
 
@@ -164,38 +164,94 @@ Launch Minecraft normally.
 
 ---
 
-# Usage
+# In Game Commands and Import Instructions
 
-Join a multiplayer server running FTB Quests.
+## Dumping Quests
 
-Once synchronization has completed, execute:
+Join the multiplayer server and wait until the quest book is fully loaded.
+
+Run:
 
 ```text
 /dumpquests
 ```
 
-The export will be generated in:
+The mod will create export folders inside:
 
 ```text
-quest-dumps/
+<Instance Folder>/quest-dumps/
 ```
 
-Example:
+Look for the newest folder named:
 
 ```text
-quest-dumps/
-└── ftbquests-full-2026-06-29_14-51-08/
+import-ready-YYYY-MM-DD_HH-MM-SS
 ```
 
-Contents:
+Inside that folder, open:
 
 ```text
-chapters/
-reward_tables/
-chapter_groups.snbt
-data.snbt
+INSTANCE_CONFIG/
 ```
 
+You should see:
+
+```text
+ftbquests/
+```
+
+---
+
+## Importing Into Single Player
+
+Close Minecraft completely.
+
+Copy this folder:
+
+```text
+quest-dumps/import-ready-YYYY-MM-DD_HH-MM-SS/INSTANCE_CONFIG/ftbquests
+```
+
+Paste it into your Minecraft instance config folder:
+
+```text
+<Instance Folder>/config/
+```
+
+Final layout must be:
+
+```text
+<Instance Folder>/config/ftbquests/quests/
+```
+
+Do not place it in:
+
+```text
+saves/<world>/serverconfig/
+```
+
+Do not place it in:
+
+```text
+saves/<world>/ftbquests/
+```
+
+Those folders are used for world progress, not the imported quest database.
+
+---
+
+## Testing the Import
+
+After copying the folder:
+
+1. Start Minecraft.
+2. Create a brand new single player world.
+3. Open the quest book.
+4. Confirm chapters appear.
+5. Complete a simple quest.
+6. Claim a reward.
+
+If chapters appear and rewards work, the import succeeded.
 ---
 
 # Current Output
