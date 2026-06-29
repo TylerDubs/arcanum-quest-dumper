@@ -1,0 +1,49 @@
+plugins {
+    id 'eclipse'
+    id 'idea'
+    id 'net.minecraftforge.gradle' version '[6.0,6.2)'
+}
+
+group = 'com.nirmatacipher.questdumper'
+version = '1.0.0'
+
+base {
+    archivesName = 'arcanum-quest-dumper'
+}
+
+java {
+    toolchain.languageVersion = JavaLanguageVersion.of(17)
+}
+
+minecraft {
+    mappings channel: 'official', version: '1.20.1'
+    copyIdeResources = true
+}
+
+repositories {
+    maven { url = 'https://maven.minecraftforge.net/' }
+    maven { url = 'https://maven.architectury.dev/' }
+    maven { url = 'https://maven.ftb.dev/releases' }
+    mavenCentral()
+}
+
+dependencies {
+    minecraft 'net.minecraftforge:forge:1.20.1-47.4.0'
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+jar {
+    manifest {
+        attributes([
+            "Specification-Title": "arcanum-quest-dumper",
+            "Specification-Vendor": "NirmataCipher",
+            "Specification-Version": "1",
+            "Implementation-Title": project.name,
+            "Implementation-Version": project.jar.archiveVersion,
+            "Implementation-Vendor": "NirmataCipher"
+        ])
+    }
+}

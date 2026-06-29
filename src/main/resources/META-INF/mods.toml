@@ -1,0 +1,38 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="MIT"
+issueTrackerURL=""
+
+[[mods]]
+modId="questdumper"
+version="1.0.0"
+displayName="Arcanum Quest Dumper"
+displayURL=""
+logoFile=""
+credits=""
+authors="NirmataCipher"
+description='''
+Client side quest dumper for FTB Quests synced from a server.
+Adds /dumpquests.
+'''
+
+[[dependencies.questdumper]]
+modId="forge"
+mandatory=true
+versionRange="[47,)"
+ordering="NONE"
+side="CLIENT"
+
+[[dependencies.questdumper]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.20.1,1.20.2)"
+ordering="NONE"
+side="CLIENT"
+
+[[dependencies.questdumper]]
+modId="ftbquests"
+mandatory=false
+versionRange="[2001.4.21,)"
+ordering="AFTER"
+side="CLIENT"
