@@ -78,6 +78,9 @@ Use the generated **Import Ready** folder, **not** the raw dump folder.
 ### Imported into Single Player
 
 ![Imported](images/singleplayer_quests_loaded.png)
+
+### Imported into Single Player with edit mode
+
 ![Imported](images/singleplayer_quests_editmode.pngg)
 
 ---
