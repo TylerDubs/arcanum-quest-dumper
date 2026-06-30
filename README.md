@@ -329,11 +329,11 @@ Initial public release.
 
 ## v2.1 Command Improvements
 
-- [ ] /dumpquests status
-- [ ] /dumpquests path
-- [ ] /dumpquests open
-- [ ] /dumpquests clean
-- [ ] Better export messages
+- [x] /dumpquests status
+- [x] /dumpquests path
+- [x] /dumpquests open
+- [x] /dumpquests clean
+- [x] Better export messages
 
 ---
 
