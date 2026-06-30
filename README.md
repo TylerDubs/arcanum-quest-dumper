@@ -116,8 +116,12 @@ Use the generated **Import Ready** folder, **not** the raw dump folder.
 2. Place the JAR into your Minecraft `mods` folder.
 3. Join a multiplayer server running FTB Quests.
 4. Wait for quests to finish synchronizing.
+<<<<<<< HEAD
 5. open quest book flip through chapters for fun then exit
 6. Run:
+=======
+5. Run:
+>>>>>>> main
 
 ```text
 /dumpquests
