@@ -9,6 +9,8 @@
 
 **Author:** NirmataCipher
 
+RESULTS DEPEND ON SERVER QUEST COMPLETION!!!  
+
 ---
 
 # Overview
@@ -46,7 +48,7 @@ Version **1.0.0** has been tested successfully using the **ArcanumLand** modpack
 
 Confirmed functionality:
 
-* Complete quest dump
+* Complete of unlocked or finished quest dump
 * Import ready export generation
 * Single player import
 * Quest progression
